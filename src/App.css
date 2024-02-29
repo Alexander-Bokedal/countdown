@@ -1,69 +1,69 @@
 .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    max-width: 100vh;
-    margin: 0 auto;
-    height: 100vh;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #282c34; /* Darker background for depth */
+  color: #61dafb; /* React default blue for a familiar developer touch */
+  min-height: 100vh;
+  padding: 40px 20px; /* More breathing room */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%; /* Give some more room */
+  max-width: 900px; /* Set a max width for larger displays */
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px; /* Replace justify-content with gap for even spacing */
+  width: 100%;
+  margin-top: 40px; /* Increased space from the title */
+}
+
+.time {
+  background: #20232a; /* A lighter shade for the time boxes */
+  border: none; /* Removing the border for a flat design */
+  border-radius: 20px; /* More pronounced rounded corners */
+  padding: 20px;
+  font-size: 2rem; /* Larger font size for emphasis */
+  font-weight: 300; /* Lighter font-weight for a modern touch */
+  color: #61dafb; /* Keeping the color consistent with the theme */
+  box-shadow: 0 10px 20px -10px rgba(97, 218, 251, 0.2); /* Subtle glow effect */
+}
+
+.paragraph {
+  background: none; /* Remove the background for a clean look */
+  color: #fff; /* White color for the text for contrast */
+  border-left: 4px solid #61dafb; /* A pop of color on the side */
+  border-radius: 0; /* Removing border-radius for a modern card style */
+  padding: 20px;
+  font-size: 1.1rem; /* Slightly larger font for readability */
+  margin: 40px 0; /* More vertical space */
+  transition: transform 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.paragraph:hover {
+  transform: translateY(-5px); /* A subtle lift effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
+    width: 95%; /* More width for small screens */
   }
-  
+
   .countdown {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 20px;
+    grid-template-columns: 1fr; /* Full width for smaller screens */
   }
-  
+
   .time {
-    text-align: center;
-    margin: 0 10px;
-    background-color: #333;
-    border: 2px solid #444;
-    border-radius: 10px;
-    padding: 10px;
-    width: 100px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff9800; /* Orange color for numbers */
+    margin: 10px 0; /* Keep consistent spacing */
   }
-  
-  .paragraph {
-    background-color: #333;
-    border: 2px solid #444;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .container {
-      width: 90%; /* Adjust the width for smaller screens */
-    }
-  
-    .countdown {
-      flex-direction: column; /* Stack countdown items vertically */
-      align-items: center; /* Center items vertically */
-    }
-  
-    .time {
-      width: 150px; /* Adjust the width for smaller screens */
-      margin: 10px 0; /* Add some vertical margin for spacing */
-    }
-  }
-  
+}

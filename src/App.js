@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const targetDate = new Date("February 1, 2024 00:00:00");
+  const targetDate = new Date("June 1, 2024 00:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="paragraph">
-          <p>Alexanders alldeles egna nedräkning till vad han hoppas ska bli en alldeles kanonbra föräldraledighet.</p>
+          <p>Erikas alldeles egna nedräkning till vad vi hoppas ska bli den bästa flytten i hennes liv.</p>
         </div>
         <div className="countdown">
           <div className="time">{timeLeft.days} days</div>
